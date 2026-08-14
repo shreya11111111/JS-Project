@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+    <script src="../scripts/CreateUser.js" defer></script>
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="navbar">
+      <figure class="logo">CRUD-APP</figure>
+
+      <nav class="navlinks">
+        <a href="../index.html">Home</a>
+        <a href="./CreateUser.html">Create User</a>
+        <a href="./AllUsers.html">All Users</a>
+      </nav>
+    </header>
+    <!--Main Section-->
+    <main class="main-container">
+      <h1>Create User</h1>
+
+      <form id="register-form" class="form">
+        <label for="fullname">Fullname</label>
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="Shreya doe"
+        />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="shreyadoe@example.com"
+          required
+        />
+        <br />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="***********"
+          minlength="6"
+        />
+        <br />
+        <button>Create</button>
+      </form>
+    </main>
+  </body>
+</html>
