@@ -2,7 +2,7 @@ const usersContainer = document.querySelector("#users-container");
 
 async function getAllUsers() {
   try {
-    let resp = await fetch("https://premium-js.onrender.com/users");
+    let resp = await fetch("https://js-project-2x1m.onrender.com/users");
     let data = await resp.json();
     // console.log(data);
     displayUsers(data);
@@ -38,7 +38,7 @@ function editUser(id) {
 }
 
 async function deleteUser(id) {
-  await fetch(`http://localhost:5000/users/${id}`, {
+  await fetch(`https://js-project-2x1m.onrender.com/users/${id}`, {
     method: "DELETE",
   });
 

@@ -16,7 +16,7 @@ registerForm.addEventListener("submit", async (e) => {
   console.log(newUser);
 
   //! SEND NEWUSER TO DATABASE
-  await fetch("https://premium-js.onrender.com/users" , {
+  await fetch("https://js-project-2x1m.onrender.com/users" , {
     method : "POST",
     body : JSON.stringify(newUser),
     headers : {

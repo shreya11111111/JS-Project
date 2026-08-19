@@ -7,7 +7,7 @@ let params = new URLSearchParams(window.location.search);
 let id = params.get("id");
 
 async function getEditUser() {
-  let resp = await fetch(`https://premium-js.onrender.com/users/${id}`);
+  let resp = await fetch(`https://js-project-2x1m.onrender.com/users/${id}`);
   let data = await resp.json();
   console.log(data);
 
@@ -26,7 +26,7 @@ editForm.addEventListener("submit", async (e) => {
     password: passwordInput.value,
   };
 
-  await fetch(`https://premium-js.onrender.com/users/${id}`, {
+  await fetch(`https://js-project-2x1m.onrender.com/users/${id}`, {
     method: "PUT",
     body: JSON.stringify(updatedData),
     headers: {
