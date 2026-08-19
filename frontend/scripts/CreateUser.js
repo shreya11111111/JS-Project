@@ -3,28 +3,29 @@ const fullnameInput = document.querySelector("#fullname");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 
-// console.log(registerForm);
-// console.log(fullnameInput);
-// console.log(emailInput);
-// console.log(passwordInput);
+registerForm.addEventListener("submit", async (e) => {
+  e.preventDefault(); // --> stops browser's default behaviour
+  console.log("Form Submitted");
 
-registerForm.addEventListener("submit",(e)=>{
-  e.preventDefault();
-  console.log("form submitted");
-
-  const newUser={
+  const newUser = {
     fullname: fullnameInput.value,
-    email:emailInput.value.toLowerCase(),
-    password:passwordInput.value,
+    email: emailInput.value.toLowerCase(),
+    password: passwordInput.value,
   };
 
   console.log(newUser);
 
-  //! send newuser to database
+  //! SEND NEWUSER TO DATABASE
+  await fetch("https://premium-js.onrender.com/users" , {
+    method : "POST",
+    body : JSON.stringify(newUser),
+    headers : {
+      "content-type" : "application/json"
+    }
+  })
 
 
-  //!navigate to all users page 
-  window.location.href="AllUsers.html"
-
-  
+  //! NAVIGATE TO ALL USERS PAGE
+  window.location.href = "AllUsers.html"
 });
+
