@@ -1,14 +1,14 @@
 {
   "users": [
     {
-      "fullname": "John Doe",
-      "email": "john@gmail.com",
+      "fullname": "Amir khan ",
+      "email": "amir@gmail.com",
       "password": "123456789",
       "id": 1
     },
     {
-      "fullname": "Jane DOE",
-      "email": "jane@gmail.com",
+      "fullname": "Jennifer winget",
+      "email": "jenniegmail.com",
       "password": "123456789",
       "id": 2
     }
